@@ -1,0 +1,33 @@
+@mixin smallerthan($width) {
+  @media all and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin biggerthan($width) {
+  @media all and (min-width: $width) {
+    @content;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-down-desktop {
+    display: none !important;
+  }
+}
+@media (min-width: 767px) {
+  .hidden-up-desktop {
+    display: none !important;
+  }
+}
+
+._container {
+  max-width: 1760px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.--transparent {
+  opacity: 0;
+  color: transparent !important;
+}

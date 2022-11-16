@@ -1,0 +1,57 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & h1 {
+    font-size: 28px;
+    line-height: 40px;
+    color: #000000;
+
+    @include smallerthan(767px) {
+      font-size: 20px;
+      line-height: 29px;
+    }
+  }
+  margin-bottom: 30px;
+}
+.control {
+  display: flex;
+  gap: 30px;
+
+  &-icon {
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 20px;
+    height: 12px;
+    fill: #a5a5a5;
+    &:hover {
+      fill: #2e3b6e;
+      transition: 0.3s ease;
+      transform: scale(1.1);
+    }
+  }
+}
+.slick-list {
+}
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  margin: 0 40px 0 0;
+  height: inherit !important;
+  
+  user-select: none;
+  -webkit-user-drag: none;
+  & > div {
+    height: 100% !important;
+    & > div {
+      height: 100% !important;
+    }
+  }
+
+  @include smallerthan(767px) {
+    margin: 0 20px 0 0;
+
+  }
+}

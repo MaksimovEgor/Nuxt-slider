@@ -1,0 +1,144 @@
+.carousel {
+  width: 100%;
+
+  & .card {
+    position: relative;
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    cursor: grab;
+
+    &-image-wrapper {
+      position: relative;
+
+      & label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-20%, -50%);
+      }
+    }
+    &-image {
+      width: 100%;
+      height: 193px;
+      object-fit: contain;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    &-articul {
+      font-size: 13px;
+      line-height: 24px;
+      padding-top: 23px;
+      @include smallerthan(767px) {
+        font-size: 13px;
+        line-height: 13px;
+        padding-top: 13px;
+        text-align: center;
+      }
+    }
+    &-title {
+      font-size: 14px;
+      line-height: 171%;
+      color: #000000;
+      @include smallerthan(767px) {
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+    &-rating {
+      padding: 0;
+      width: 93px;
+      height: 17px;
+      margin: 10px 0;
+    }
+
+    &-old {
+      display: block;
+      font-size: 14px;
+      line-height: 28px;
+      /* identical to box height, or 200% */
+      text-decoration-line: line-through;
+      color: #959595;
+    }
+    &-current {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      /* identical to box height, or 140% */
+      color: #000000;
+      margin-bottom: 23px;
+      @include smallerthan(767px) {
+        margin-bottom: 0px;
+        margin-top: 5px;
+      }
+    }
+
+    & .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      justify-self: flex-end;
+
+      @include smallerthan(767px) {
+        position: absolute;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: calc(100% - 40px);
+        width: 60px;
+        right: 20px;
+        top: 20px;
+        gap: 20px;
+      }
+    }
+    &-btn {
+      width: 100px;
+      height: 60px;
+      background: #2e3b6e;
+      border-radius: 10px;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include smallerthan(767px) {
+        width: 60px;
+        height: 50px;
+        margin: auto auto 20px;
+      }
+
+      & .cart-icon {
+        width: 20px;
+        height: 18.5px;
+      }
+    }
+    & .heart-icon {
+      width: 24px;
+      height: 24px;
+      fill: #D2D2D2;  
+      @include smallerthan(767px) {
+        order: 2;
+    
+      }
+    }
+    & .graph-icon {
+      width: 24px;
+      height: 24px;
+      fill: #D2D2D2;    
+      @include smallerthan(767px) {
+        order: 1;
+        
+      }
+    }
+  }
+}
+.--light {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 28px;
+  /* identical to box height, or 215% */
+  color: #adadad;
+}
